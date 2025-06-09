@@ -1,0 +1,417 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+<style type="text/css">
+
+	html, body{
+		background:transparent;
+		overflow: hidden;
+	}
+	
+	@font-face{
+		font-family: "Futura-LT-W01-Book"; 
+		src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/8bf38806-3423-4080-b38f-d08542f7e4ac.woff2") format('woff2');
+	}
+	
+	@font-face {
+  		font-family: "Futura-LT-W01-Light";
+		src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/26091050-06ef-4fd5-b199-21b27c0ed85e.woff2") format('woff2');
+	}  
+	
+	.element-box{
+		border: 2px solid rgba(224, 197, 171, 1);
+		background-color: rgba(65, 100, 130, 0.65);
+		border-radius: 5px;
+		width: 350px;
+		margin: auto;
+		padding: 22px;
+	}
+
+	.section-title{
+		margin-bottom: 12px;
+		padding-left: 10px;
+	}
+
+	.menu-icon{
+		height: 25px;
+		width: 25px;
+	}
+
+	.menu-icon svg{
+		height: 25px;
+		width: 25px;
+		margin: auto;
+		fill: #E0C5AB;
+		fill-opacity: 1;
+		stroke: rgba(255, 255, 255, 1);
+		stroke-width: 0px;
+		display: inline;
+		position: relative;
+		top: 2px;
+	}
+	
+	.menu-text h2{
+		margin-left: 8px; 
+		font-size: 22px;
+		color: #E0C5AB;
+		display: inline;
+		font-family: "Futura-LT-W01-Light";
+		letter-spacing: 0.05em;
+		vertical-align: 8%;
+	}
+
+	a.button{
+		padding: 0.7em;
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		font-size: 13px;
+		font-family: "Futura-LT-W01-Light";
+	}
+	
+	a:link {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+	}
+
+	a:visited {
+		color: #ffffff;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		color: #E0C5AB;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	
+	a:active {
+		color: #E0C5AB;
+		background-color: transparent;
+		text-decoration: none;
+	}
+
+	.catagory-item:first-child{
+		border-radius: 5px 5px 0px 0px;
+		overflow: hidden;
+	}
+
+	.catagory-item:last-child{
+		border-radius: 0px 0px 5px 5px;
+		overflow: hidden;
+	}
+
+	.layer-1{
+		background-color: #000;
+		border-top: 1px solid #666;
+	}
+
+	.layer-1:first-child{
+		border-radius: 5px 5px 0px 0px;
+		overflow: hidden;
+		border-top:none;
+	}
+
+	.layer-1:last-child{
+		border-radius: 0px 0px 5px 5px;
+		overflow: hidden;
+	}
+
+	.layer-2{
+		background-color: #333;
+		border-top: 1px solid #666;
+		padding-left: 0.75em;
+	}
+
+	.layer-3{
+		background-color: #333;
+		border-top: 1px solid #666;
+		padding-left: 0.75em;
+	}
+	
+	.layer-4{
+		background-color: #333;
+		border-top: 1px solid #666;
+		padding-left: 2.25em;
+		text-indent: -0.45em;
+	}
+	
+	.icon-holder{
+		width: 15px;
+		margin-left: -5px;
+		display: inline;
+		padding-right:5px;
+	}
+
+</style>
+
+<div class="element-box">
+
+<div class="section-title">
+	<span class="menu-icon">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.000003814697266 50" role="img" preserveAspectRatio="xMidYMid meet" style="stroke-width: 0px;"><g><path d="M46,4V46H4V4H46m.9219-4H3.0122A3.37,3.37,0,0,0,0,3.20139V47.11111A3.07775,3.07775,0,0,0,3.0122,50H46.9219A3.13976,3.13976,0,0,0,50,47.11111V3.20139A3.431,3.431,0,0,0,46.9219,0Z"></path><path d="M34,31 v3 h-19 v-3 h19z"></path><path d="M34,17 v3 h-19 v-3 h19z"></path><path d="M34,24 v3 h-19 v-3 h19z"></path></g></svg>
+	</span>
+	<span class="menu-text"><h2>Works by Category</h2></span>
+</div>
+
+	<div id="catagorymenu" data-children=".catagory-item">
+		<div class="catagory-item layer-1">	
+			<a data-toggle="collapse" class="button" data-parent="#catagorymenu" href="#large-scale-work" aria-expanded="true" aria-controls="large-scale-work">
+				Large-Scale Works
+			</a>
+			<div id="large-scale-work" class="collapse" role="tabpanel">
+				<div id="lsw-menu" data-children=".lsw-item">
+					<div class="lsw-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#lsw-menu" href="#symphonic" aria-expanded="false" aria-controls="symphonic">
+							Symphonic
+						</a>
+						<div id="symphonic" class="collapse" role="tabpanel">
+							<div class="lsw-item layer-3"><a class="button" target="_top" href="http://www.davidhychan.com/return-to-london"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span> Dreams on the Edge: I. Return to London</a></div>
+							<div class="lsw-item layer-3"><a class="button" target="_top" href="http://www.davidhychan.com/a-night-abroad-sym"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span> A Night Abroad</a></div>
+                            <div class="lsw-item layer-3"><a class="button" target="_top" href="http://www.davidhychan.com/reunion-sym"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span> Reunion</a></div>
+						</div>
+					</div>
+					<div class="lsw-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#lsw-menu" href="#vocal-choral-orchestral" aria-expanded="false" aria-controls="vocal-choral-orchestral">
+							Vocal/Choral - Orchestral
+						</a>
+						<div id="vocal-choral-orchestral" class="collapse" role="tabpanel">
+							<div class="lsw-item layer-3"><a class="button" target="_top" href="http://www.davidhychan.com/laudate-dominum-orchestral"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Laudate Dominum</a></div>
+						</div>
+					</div>
+                    <div class="lsw-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#lsw-menu" href="#wind-orchestral" aria-expanded="false" aria-controls="wind-orchestral">
+							Wind Orchestral
+						</a>
+						<div id="wind-orchestral" class="collapse" role="tabpanel">
+							<div class="lsw-item layer-3"><a class="button" target="_top" href="http://www.davidhychan.com/reunion-wind"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Reunion</a></div>
+						</div>
+					</div>
+                    <div class="lsw-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#lsw-menu" href="#string-orchestral" aria-expanded="false" aria-controls="string-orchestral">
+							String Orchestral
+						</a>
+						<div id="string-orchestral" class="collapse" role="tabpanel">
+							<div class="lsw-item layer-3"><a class="button" target="_top" href="http://www.davidhychan.com/if-heaven-too-had-passions"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> If Heaven Too Had Passions</a></div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div> 
+		<div class="catagory-item layer-1">
+			<a data-toggle="collapse" class="button" data-parent="#catagorymenu" href="#chamber-w" aria-expanded="false" aria-controls="chamber-w">
+				Chamber (Western)
+			</a>
+			<div id="chamber-w" class="collapse" role="tabpanel">
+            	<div class="chamber-c-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/east-meets-west"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> East Meets West</a></div>  
+				<div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/a-night-abroad-chamber"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> A Night Aboard</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/the-lost-days"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> The Lost Days</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/revelation"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Revelation</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/sonic-dance"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Sonic Dance</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/lost-in-paradise"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Lost in Paradise</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/reminiscing-the-childhood"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Reminiscing the Childhood</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/utterance-to-firmament"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Utterance to Firmament</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/passion-from-within"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Passion From Within</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/the-jealousy-of-heaven"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> The Jealousy of Heaven</a></div>
+                <div class="chamber-w-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/ode-to-autumn"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Ode to Autumn</a></div>      
+			</div>
+		</div>                        
+        <div class="catagory-item layer-1">
+			<a data-toggle="collapse" class="button" data-parent="#catagorymenu" href="#chamber-c" aria-expanded="false" aria-controls="chamber-c">
+				Chamber (Chinese)
+			</a>
+			<div id="chamber-c" class="collapse" role="tabpanel">
+                <div class="chamber-c-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/grass-on-the-ancient-plain"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Grass on the Ancient Plain: A Song of Farewell</a></div>  
+            </div>
+		</div>
+        <div class="catagory-item layer-1">	
+			<a data-toggle="collapse" class="button" data-parent="#catagorymenu" href="#vocal-choral" aria-expanded="false" aria-controls="vocal-choral">
+				Vocal & Choral
+			</a>
+			<div id="vocal-choral" class="collapse" role="tabpanel">
+				<div id="vc-menu" data-children=".vc-item">
+					<div class="vc-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#vc-menu" href="#female-choir" aria-expanded="false" aria-controls="female-choir">
+							Female Choir
+						</a>
+						<div id="female-choir" class="collapse" role="tabpanel">
+                        	<div id="fc-menu" data-children=".fc-item">
+                                <div class="fc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#fc-menu" href="#fc-mandarin" aria-expanded="false" aria-controls="fc-mandarin">
+                                    	Mandarin Chinese
+                                    </a>
+                                    <div id="fc-mandarin" class="collapse" role="tabpanel">
+                                    	<div class="fc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/second-farewell-to-cambridge-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Second Farewell to Cambridge</a></div>
+                                    	<div class="fc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/the-legend-of-wild-geese"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> The Legend of Wild Geese</a></div>
+                                        <div class="fc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/gods-on-the-magpie-bridge-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Gods on the Magpie Bridge</a></div>
+                                        <div class="fc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/fly-and-fade-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Fly and Fade</a></div>
+                                        <div class="fc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/reality-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Reality</a></div>
+                                        <div class="fc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/a-short-song-of-spring-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> A Short Song of Spring</a></div>
+                                        <div class="fc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/a-retrospect-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> A Retrospect</a></div>
+                                    </div>
+                                </div>
+                                <div class="fc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#fc-menu" href="#fc-cantonese" aria-expanded="false" aria-controls="fc-cantonese">
+                                    	Cantonese Chinese
+                                    </a>
+                                    <div id="fc-cantonese" class="collapse" role="tabpanel">
+                                        <div class="fc-cantonese layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/all-throughout-this-my-life"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> All Throughout This My Life</a></div>
+                                    </div>
+                                </div>
+                                <div class="fc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#fc-menu" href="#fc-english" aria-expanded="false" aria-controls="fc-english">
+                                    	English
+                                    </a>
+                                    <div id="fc-english" class="collapse" role="tabpanel">
+                                        <div class="fc-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/raas-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Royal Alexandra & Albert Service</a></div>
+                                        <div class="fc-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/love-seeketh-female"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Love Seeketh not Itself to Please</a></div>
+                                    </div>
+                                </div>
+                                <div class="fc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#fc-menu" href="#fc-latin" aria-expanded="false" aria-controls="fc-latin">
+                                    	Latin
+                                    </a>
+                                    <div id="fc-latin" class="collapse" role="tabpanel">
+                                        <div class="fc-latin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/lacrimosa"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Lacrimosa</a></div>
+                                    </div>
+                                </div>
+                             </div>
+						</div>
+					</div>
+                    <div class="vc-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#vc-menu" href="#male-choir" aria-expanded="false" aria-controls="male-choir">
+							Male Choir
+						</a>
+                        <div id="male-choir" class="collapse" role="tabpanel">
+                        	<div id="mc-menu" data-children=".mc-item">
+                                <div class="mc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#mc-menu" href="#mc-mandarin" aria-expanded="false" aria-controls="mc-mandarin">
+                                    	Mandarin Chinese
+                                    </a>
+                                    <div id="mc-mandarin" class="collapse" role="tabpanel">
+                                        <div class="mc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/second-farewell-to-cambridge-male"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Second Farewell to Cambridge</a></div>
+                                        <div class="mc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/fly-and-fade-male"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Fly and Fade</a></div>
+                                        <div class="mc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/reality-male"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Reality</a></div>
+                                        <div class="mc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/a-short-song-of-spring-male"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> A Short Song of Spring</a></div>
+                                        <div class="mc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/by-chance"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> By Chance</a></div>
+                                    </div>
+                                </div>
+                                <div class="mc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#mc-menu" href="#mc-cantonese" aria-expanded="false" aria-controls="mc-cantonese">
+                                    	Cantonese Chinese
+                                    </a>
+                                    <div id="mc-cantonese" class="collapse" role="tabpanel">
+                                        <div class="mc-cantonese layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/all-throughout-this-my-life"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> All Throughout This My Life</a></div>
+                                    </div>
+                                </div>
+                             </div>
+						</div>
+					</div>
+                    <div class="vc-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#vc-menu" href="#mixed-choir" aria-expanded="false" aria-controls="mixed-choir">
+							Mixed Choir
+						</a>
+						<div id="mixed-choir" class="collapse" role="tabpanel">
+                        	<div id="mixc-menu" data-children=".mixc-item">
+                                <div class="mixc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#mixc-menu" href="#mixc-mandarin" aria-expanded="false" aria-controls="mixc-mandarin">
+                                    	Mandarin Chinese
+                                    </a>
+                                    <div id="mixc-mandarin" class="collapse" role="tabpanel">
+                                        <div class="mixc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/gods-on-the-magpie-bridge-mixed"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Gods on the Magpie Bridge</a></div>
+                                        <div class="mixc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/fly-and-fade-mixed"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Fly and Fade</a></div>
+                                        <div class="mixc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/a-short-song-of-spring-mixed"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> A Short Song of Spring</a></div>
+                                        <div class="mixc-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/a-retrospect-mixed"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> A Retrospect</a></div>
+                                    </div>
+                                </div>
+                                <div class="mixc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#mixc-menu" href="#mixc-cantonese" aria-expanded="false" aria-controls="mixc-cantonese">
+                                    	Cantonese Chinese
+                                    </a>
+                                    <div id="mixc-cantonese" class="collapse" role="tabpanel">
+                                        <div class="mixc-cantonese layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/all-throughout-this-my-life"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> All Throughout This My Life</a></div>
+                                        <div class="mixc-cantonese layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/cantonese-preces-and-responses-rite2"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Cantonese Preces and Responses <br>(Rite 2, Evensong)</a></div>
+                                        <div class="mixc-cantonese layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/this-place"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> This Place (Locus Iste)</a></div>
+                                    </div>
+                                </div>
+                                <div class="mixc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#mixc-menu" href="#mixc-english" aria-expanded="false" aria-controls="mixc-english">
+                                    	English
+                                    </a>
+                                    <div id="mixc-english" class="collapse" role="tabpanel">
+                                        <div class="mixc-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/till-love-and-fame"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Till Love and Fame to Nothingness Do Sink</a></div>
+                                        <div class="mixc-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/truth-and-lie"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Truth and Lie: When My Love Swears</a></div>
+                                        <div class="mixc-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/raas-mixed"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Royal Alexandra & Albert Service</a></div>
+                                        <div class="mixc-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/love-seeketh-mixed"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Love Seeketh not Itself to Please</a></div>
+                                    </div>
+                                </div>
+                                <div class="mixc-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#mixc-menu" href="#mixc-latin" aria-expanded="false" aria-controls="mixc-latin">
+                                    	Latin
+                                    </a>
+                                    <div id="mixc-latin" class="collapse" role="tabpanel">
+                                        <div class="mixc-latin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/ave-regina-caelorum"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Ave, Regina Caelorum</a></div>
+                                        <div class="mixc-latin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/laudate-dominum-organ"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Laudate Dominum</a></div>
+                                    </div>
+                                </div>
+                             </div>
+						</div>
+					</div>
+                    <div class="vc-item layer-2">
+						<a data-toggle="collapse" class="button" data-parent="#vc-menu" href="#other-vocal" aria-expanded="false" aria-controls="other-vocal">
+							Other Vocal Works
+						</a>
+						<div id="other-vocal" class="collapse" role="tabpanel">
+                        	<div id="ov-menu" data-children=".ov-item">
+                                <div class="ov-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#ov-menu" href="#ov-mandarin" aria-expanded="false" aria-controls="ov-mandarin">
+                                    	Mandarin Chinese
+                                    </a>
+                                    <div id="ov-mandarin" class="collapse" role="tabpanel">
+                                        <div class="ov-mandarin layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/a-retrospect-vocal"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> A Retrospect</a></div>
+                                    </div>
+                                </div>
+                                <div class="ov-item layer-3">
+                                    <a data-toggle="collapse" class="button" data-parent="#ov-menu" href="#ov-english" aria-expanded="false" aria-controls="ov-english">
+                                    	English
+                                    </a>
+                                    <div id="ov-english" class="collapse" role="tabpanel">
+                                        <div class="ov-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/ming-hua-tang"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Hymn Tune - Ming Hua Tang</a></div>
+                                        <div class="ov-english layer-4"><a class="button" target="_top" href="http://www.davidhychan.com/love-and-harmony-combine"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Love and Harmony Combine</a></div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>	      
+        <div class="catagory-item layer-1">
+        	<a data-toggle="collapse" class="button" data-parent="#catagorymenu" href="#solo" aria-expanded="true" aria-controls="solo">
+                    Instrumental Solo
+            </a>
+            <div id="solo" class="collapse" role="tabpanel">
+                <div class="solo-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/fantasia-after-auld-lang-syne"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Fantasia After Auld Lang Syne</a></div> 
+                <div class="solo-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/we-will-meet-again"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> We Will Meet Again</a></div> 
+                <div class="solo-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/mayila"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Mayila</a></div> 
+            </div>
+        </div>                        
+        <div class="catagory-item layer-1">
+            <a data-toggle="collapse" class="button" data-parent="#catagorymenu" href="#music-theatre" aria-expanded="true" aria-controls="music-theatre">
+                    Stage Works
+            </a>
+            <div id="music-theatre" class="collapse" role="tabpanel">
+                <div class="music-theatre-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/confessions-on-the-edge"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Confessions on the Edge</a></div>
+                <div class="music-theatre-item layer-2"><a class="button" target="_top" href="http://www.davidhychan.com/grieving-burial-of-flowers"><span class="icon-holder"><i class="fa fa-file-text-o" aria-hidden="true"></i></span></i> Grieving Burial of Flowers</a></div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
