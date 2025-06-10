@@ -441,35 +441,22 @@
 </script>
 
 <script>
-  // Simulate Wix-like horizontal transition
   document.querySelectorAll('.button').forEach(btn => {
     btn.addEventListener('click', function(e) {
       const href = btn.getAttribute('href');
       const target = btn.getAttribute('target');
-      if (!href || target === '_blank') return;
+      if (!href || target === '_blank' || href.startsWith('#')) return;
 
       e.preventDefault();
 
-      // Create transition overlay
-      const overlay = document.createElement('div');
-      overlay.style.position = 'fixed';
-      overlay.style.top = 0;
-      overlay.style.left = 0;
-      overlay.style.width = '100vw';
-      overlay.style.height = '100vh';
-      overlay.style.backgroundColor = '#fff'; // match your site background if needed
-      overlay.style.zIndex = 9999;
-      overlay.style.transition = 'transform 0.6s ease';
-      overlay.style.transform = 'translateX(100%)';
-      document.body.appendChild(overlay);
+      // Animate the entire body sliding left
+      document.body.style.transition = 'transform 0.5s ease';
+      document.body.style.transform = 'translateX(-100vw)';
 
-      requestAnimationFrame(() => {
-        overlay.style.transform = 'translateX(0)';
-      });
-
+      // After animation, go to new page
       setTimeout(() => {
         window.location.href = href;
-      }, 600);
+      }, 500);
     });
   });
 </script>
